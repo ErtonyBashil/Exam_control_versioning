@@ -21,15 +21,15 @@ jobs:
       - name: code formatting Ruff
         run: |
           python -m pip install --upgrade pip
-          pip install back 
+          pip install black 
 
       - name: Check code quality with Ruff
         run: |
-          ruff --check .
+          black --check .
 
 
       # check the quality of all Python modules using Ruff
-      - name: code formatting Ruff
+      - name: Install the ruff requirement
         run: |
           python -m pip install --upgrade pip
           pip install ruff
@@ -37,3 +37,9 @@ jobs:
       - name: Check code quality with Ruff
         run: |
           ruff check .
+
+
+
+
+
+
